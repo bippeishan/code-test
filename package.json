@@ -1,0 +1,26 @@
+{
+  "name": "code-test",
+  "version": "1.0.0",
+  "description": "练习基础编码能力",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bippeishan/code-test.git"
+  },
+  "author": "bips",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bippeishan/code-test/issues"
+  },
+  "homepage": "https://github.com/bippeishan/code-test#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.17.0",
+    "@typescript-eslint/parser": "4.17.0",
+    "eslint": "7.20.0",
+    "eslint-plugin-react": "7.22.0",
+    "prettier": "2.2.1"
+  }
+}
