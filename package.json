@@ -22,5 +22,8 @@
     "eslint": "7.20.0",
     "eslint-plugin-react": "7.22.0",
     "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "lodash.curry": "^4.1.1"
   }
 }
