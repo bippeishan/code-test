@@ -85,4 +85,42 @@ class Child extends Parent {
 
 /**
  * es6的class是怎么实现继承的
+ * 是通过原型链和构造函数组合继承来实现的
  */
+// es6 代码
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(this.name + " makes a noise.");
+    }
+}
+class Dog extends Animal {
+    constructor(name) {
+        super(name);
+    }
+    speak() {
+        console.log(this.name + " barks.");
+    }
+}
+let d = new Dog("Mitzie");
+d.speak(); // 输出 "Mitzie barks."
+
+// 转换代码
+function Animal(name) {
+    this.name = name;
+}
+Animal.prototype.speak = function () {
+    console.log(this.name + " makes a noise.");
+};
+function Dog(name) {
+    Animal.call(this, name);
+}
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.speak = function () {
+    console.log(this.name + " barks.");
+};
+let c = new Dog("Mitzie");
+c.speak(); // 输出 "Mitzie barks."
